@@ -1,0 +1,11 @@
+git
+networkmanager
+alacritty
+neovim
+gammastep
+wmenu
+    otf-font-awesome
+wl-clipboard
+neofetch
+nodejs
+npm
