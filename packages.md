@@ -7,5 +7,6 @@ wmenu
     otf-font-awesome
 wl-clipboard
 neofetch
+less
 nodejs
 npm
