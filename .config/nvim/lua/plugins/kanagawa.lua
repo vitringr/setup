@@ -65,6 +65,9 @@ return {
           ["@lsp.typemod.function.readonly"] = { bold = false },
           ["@lsp.typemod.variable.defaultLibrary"] = { fg = palette.waveRed },
 
+          -- Telescope --
+          TelescopeBorder = {bg = "none"},
+
           -- UI ---
           NormalFloat = { bg = "none" },
           FloatBorder = { bg = "none" },
