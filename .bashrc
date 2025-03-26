@@ -34,6 +34,7 @@ g() {
     a)  git add . ;;
     u)  git commit -m "update" ;;
     P)  git push ;;
+    l)  git log ;;
     *)  git "$cmd" "$@" ;;
   esac
 }
