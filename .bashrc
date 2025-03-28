@@ -10,12 +10,12 @@ alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
 PS1='[\W]\$ '
 
-alias l='echo; ls -1a; echo'
+alias l='echo; ls -la; echo'
 alias ll='echo; ls -la; echo'
 alias d='echo; pwd; echo'
 alias v='nvim'
 alias c='clear'
-alias f='neofetch'
+alias f='clear; neofetch'
 alias ..='cd ..'
 
 g() {

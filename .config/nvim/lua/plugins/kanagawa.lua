@@ -66,6 +66,7 @@ return {
           ["@lsp.typemod.variable.defaultLibrary"] = { fg = palette.waveRed },
 
           -- Telescope --
+
           TelescopeBorder = {bg = "none"},
 
           -- UI ---

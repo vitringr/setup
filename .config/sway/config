@@ -134,8 +134,8 @@ input type:keyboard {
   #      to Super, basically swapping them:
   #      [Alt][Super][Space]
 
-  xkb_options "ctrl:nocaps,altwin:swap_alt_win"
-  # xkb_options ctrl:nocaps
+  # xkb_options "ctrl:nocaps,altwin:swap_alt_win"
+  xkb_options ctrl:nocaps
 
   repeat_rate 40
   repeat_delay 220
@@ -146,8 +146,8 @@ input type:keyboard {
 
 ### Output:
 
-# output DP-2 enable
-# output eDP-1 disable
+output DP-2 enable
+output eDP-1 disable
 
 
 
@@ -155,6 +155,7 @@ input type:keyboard {
 ### Misc:
 
 focus_wrapping no
+
 focus_follows_mouse no
 
 default_border none

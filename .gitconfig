@@ -1,9 +1,7 @@
-[user]
-    name = Doni
-    email = vitringr@pm.me
+# Apply to ALL repos under ~/core/
+[includeIf "gitdir:~/core/"]
+    path = ~/.gitconfig-core  # Personal config
 
-[init]
-    defaultBranch = main
-
-[credential]
-    helper = store
+# Apply to ALL repos under ~/work/
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work  # Work config

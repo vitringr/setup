@@ -1,0 +1,9 @@
+[user]
+    name = Doni
+    email = vitringr@pm.me
+
+[init]
+    defaultBranch = main
+
+[credential]
+    helper = store

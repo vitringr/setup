@@ -10,3 +10,4 @@ neofetch
 less
 nodejs
 npm
+vivaldi
