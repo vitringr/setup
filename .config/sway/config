@@ -22,6 +22,9 @@ set $menu wmenu-run
 
 output * bg #363636 solid_color
 
+# output DP-2 enable
+# output eDP-1 disable
+
 
 
 
@@ -111,7 +114,8 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2%+
 
 # Screenshot via grim
-bindsym Print exec grim
+bindsym Shift+Print exec grim
+bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
 
 
@@ -128,26 +132,19 @@ font pango:JetBrainsMono Nerd Font 10
 ### Input:
 
 input type:keyboard {
-  # Ideas:
-  #   1. Caps Lock as Ctrl.
-  #   2. Super next to Space, and Alt next
-  #      to Super, basically swapping them:
-  #      [Alt][Super][Space]
+  xkb_layout "us,bg(phonetic)"
+  xkb_variant ","
 
-  # xkb_options "ctrl:nocaps,altwin:swap_alt_win"
-  xkb_options ctrl:nocaps
+  # 1. Caps Lock as Ctrl.
+  # 2. Super next to Space, and Alt next
+  #    to Super, basically swapping them:
+  #    [Super][Alt][Space] => [Alt][Super][Space]
+  # 3. Toggle between input languages with Alt+Space.
+  xkb_options "ctrl:nocaps,altwin:swap_alt_win,grp:alt_space_toggle"
 
   repeat_rate 40
   repeat_delay 220
 }
-
-
-
-
-### Output:
-
-output DP-2 enable
-output eDP-1 disable
 
 
 

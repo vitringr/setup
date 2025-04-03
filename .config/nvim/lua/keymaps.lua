@@ -28,20 +28,19 @@ map({ "n", "v" }, "<leader>dd", vim.diagnostic.open_float, { desc = "Diagnostic"
 map({ "n", "v" }, "<leader>df", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
 
 -- LSP Global
-map({ "n", "v" }, "<leader>fs", "<cmd>LspStop<CR>", { desc = "Stop" })
 map({ "n", "v" }, "<leader>fg", "<cmd>LspInfo<CR>", { desc = "Info" })
 map({ "n", "v" }, "<leader>fr", "<cmd>LspRestart<CR>", { desc = "Restart" })
 map({ "n", "v" }, "<leader>ff", function()
-	vim.lsp.buf.format({ async = true })
+  vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
 map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 
 -- Workspace
 map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
 map({ "n", "v" }, "<leader>x", function()
-	local wrap_status = vim.wo.wrap
-	vim.wo.wrap = not wrap_status
-	vim.wo.cursorline = not wrap_status
+  local wrap_status = vim.wo.wrap
+  vim.wo.wrap = not wrap_status
+  vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
 
 -- Splits

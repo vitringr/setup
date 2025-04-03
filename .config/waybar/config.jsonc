@@ -85,6 +85,13 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
 
+  "sway/language": {
+    "format": "{}",
+    "format-en": "us",
+    "format-bg": "bg",
+    "tooltip": false,
+  },
+
   "battery": {
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
