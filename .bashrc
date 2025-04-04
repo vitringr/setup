@@ -35,6 +35,9 @@ g() {
     u)  git commit -m "update" ;;
     P)  git push ;;
     l)  git log ;;
+    b)  git branch ;;
     *)  git "$cmd" "$@" ;;
   esac
 }
+
+alias lock='swaylock'
