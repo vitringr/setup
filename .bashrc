@@ -35,6 +35,7 @@ g() {
     u)  git commit -m "update" ;;
     P)  git push ;;
     l)  git log ;;
+    d)  git diff ;;
     b)  git branch ;;
     *)  git "$cmd" "$@" ;;
   esac

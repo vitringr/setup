@@ -2,6 +2,7 @@ git
 networkmanager
 alacritty
 neovim
+ttf-jetbrains-mono-nerd
 gammastep
 wmenu
     otf-font-awesome
