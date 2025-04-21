@@ -115,7 +115,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2%+
 
 # Screenshot via grim
 bindsym Shift+Print exec grim
-bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym Print exec grim -g "$(slurp)" ~/Images/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
 
 
