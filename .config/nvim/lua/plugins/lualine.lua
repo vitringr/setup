@@ -1,4 +1,4 @@
--- A customizable statusline plugin.
+-- Customizable statusline.
 
 return {
   "nvim-lualine/lualine.nvim",

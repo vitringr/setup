@@ -11,6 +11,20 @@ map({ "n", "v" }, "<leader>t", "<cmd>terminal<CR>", { desc = "Terminal" })
 map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Terminal Unselect" })
 map("t", "<C-Space>", "<C-\\><C-n>", { desc = "Terminal Unselect" })
 
+-- Splits
+map({ "n", "v" }, "<C-A-h>", "<C-w><", { desc = "Decrease Width" })
+map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
+map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
+map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
+
+-- Workspace
+map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
+map({ "n", "v" }, "<leader>x", function()
+  local wrap_status = vim.wo.wrap
+  vim.wo.wrap = not wrap_status
+  vim.wo.cursorline = not wrap_status
+end, { desc = "Toggle Wrap and Cursorline" })
+
 -- Telescope
 map({ "n", "v" }, "<leader>q", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map({ "n", "v" }, "<leader>w", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
@@ -34,20 +48,6 @@ map({ "n", "v" }, "<leader>ff", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
 map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
-
--- Workspace
-map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
-map({ "n", "v" }, "<leader>x", function()
-  local wrap_status = vim.wo.wrap
-  vim.wo.wrap = not wrap_status
-  vim.wo.cursorline = not wrap_status
-end, { desc = "Toggle Wrap and Cursorline" })
-
--- Splits
-map({ "n", "v" }, "<C-A-h>", "<C-w><", { desc = "Decrease Width" })
-map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
-map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
-map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
 
 -- Obsidian
 map({ "n", "v" }, "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open" })

@@ -1,3 +1,5 @@
+-- Animated & smooth scrolling rather than instantaneous.
+
 return {
   "karb94/neoscroll.nvim",
   opts = {},

@@ -20,10 +20,14 @@ set $menu wmenu-run
 
 ### Output:
 
+# Commands to set resolution/refresh mode:
+#   swaymsg -t get_outputs
+#   swaymsg output DP-2 mode 2560x1440@144Hz
+
 output * bg #363636 solid_color
 
-# output DP-2 enable
-# output eDP-1 disable
+output DP-2 enable
+output eDP-1 disable
 
 
 

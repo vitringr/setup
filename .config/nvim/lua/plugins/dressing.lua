@@ -1,4 +1,4 @@
--- Enhances UI for input and select prompts.
+-- Better looking UI for input and select prompts.
 
 return {
   "stevearc/dressing.nvim",

@@ -1,4 +1,5 @@
 -- Integrates Obsidian notes into Neovim.
+-- NOTE: Make sure to set the path to your vault.
 
 return {
   "epwalsh/obsidian.nvim",

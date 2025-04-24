@@ -1,4 +1,4 @@
--- A file explorer with tree-like navigation.
+-- Editable file explorer with tree-like navigation.
 
 return {
   "stevearc/oil.nvim",
