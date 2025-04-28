@@ -23,7 +23,7 @@ o.signcolumn = "yes"          -- Show sign column.
 o.cursorline = false          -- Show cursor line.
 o.wrap = false                -- Word wrap.
 
-o.timeoutlen = 300;           -- Wait delay for key combinations.
+o.timeoutlen = 500;           -- Wait delay for key combinations.
 
 o.equalalways = false         -- Don't resize splits automatically.
 o.splitright = true           -- Split vertical window to the right.
