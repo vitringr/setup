@@ -11,5 +11,8 @@ neofetch
 less
 nodejs
 npm
+neofetch
 vivaldi
+firefox
 imv
+tldr
