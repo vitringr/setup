@@ -29,8 +29,11 @@ return {
       },
 
       mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
-        ["<C-j>"] = cmp.mapping.select_next_item(),
+        -- The reason I unbound these keymaps is because
+        -- I can use the default <Ctrl n> <Ctrl p>, and also
+        -- because <Ctrl j> <Ctrl k> actually do stuff.
+        -- ["<C-k>"] = cmp.mapping.select_prev_item(),
+        -- ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
