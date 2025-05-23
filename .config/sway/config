@@ -26,8 +26,8 @@ set $menu wmenu-run
 
 output * bg #363636 solid_color
 
-output DP-2 enable
-output eDP-1 disable
+# output DP-2 enable
+# output eDP-1 disable
 
 
 
@@ -119,7 +119,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2%+
 
 # Screenshot via grim
 bindsym Shift+Print exec grim
-bindsym Print exec grim -g "$(slurp)" ~/Images/screenshot-$(date +'%Y%m%d-%H%M%S').png
+bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +'%Y%m%d-%H%M%S').png
 
 
 
