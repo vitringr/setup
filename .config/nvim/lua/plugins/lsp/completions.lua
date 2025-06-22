@@ -29,11 +29,6 @@ return {
       },
 
       mapping = cmp.mapping.preset.insert({
-        -- The reason I unbound these keymaps is because
-        -- I can use the default <Ctrl n> <Ctrl p>, and also
-        -- because <Ctrl j> <Ctrl k> actually do stuff.
-        -- ["<C-k>"] = cmp.mapping.select_prev_item(),
-        -- ["<C-j>"] = cmp.mapping.select_next_item(),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
@@ -41,6 +36,7 @@ return {
       }),
 
       sources = cmp.config.sources({
+        { name = "copilot", group_index = 2 },
         { name = "nvim_lsp", group_index = 2 },
         { name = "luasnip",  group_index = 2 },
         { name = "buffer",   group_index = 2 },
