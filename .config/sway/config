@@ -35,13 +35,23 @@ output * bg #363636 solid_color
 ### Keybinds:
 
 bindsym $mod+Return exec $term
+bindsym $mod+w exec $term
 
 bindsym $mod+Shift+q kill
 
 bindsym $mod+a exec $menu
 
-bindsym $mod+Shift+c reload
+bindsym $mod+v splith
+bindsym $mod+s splitv
 
+bindsym $mod+b layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+g layout toggle split
+
+bindsym $mod+c floating toggle; resize set width 60 ppt height 100 ppt; move position center
+bindsym $mod+f fullscreen
+
+bindsym $mod+Shift+z reload
 bindsym $mod+Shift+x exec swaynag -t warning -m 'Exit Sway and end Wayland session?.' -B 'Yes, exit sway' 'swaymsg exit'
 
 bindsym $mod+$left focus left
@@ -75,15 +85,6 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
-
-bindsym $mod+v splith
-bindsym $mod+s splitv
-
-bindsym $mod+b layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+g layout toggle split
-
-bindsym $mod+f fullscreen
 
 
 
