@@ -16,6 +16,7 @@ alias d='echo; pwd; echo'
 alias v='nvim'
 alias c='clear'
 alias f='clear; neofetch'
+alias b='btop'
 alias ..='cd ..'
 
 g() {
