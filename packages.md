@@ -16,3 +16,4 @@ vivaldi
 firefox
 imv
 tldr
+btop
