@@ -41,10 +41,11 @@ Config: `~/.config/nvim/`
 Use `:Mason` to add stuff like:
 
 - `lua-language-server lua_ls`
-- `marksman`
+- `clangd`
 - `prettier`
 - `stylua`
 - `typescript-language-server ts_ls`
+- `marksman`
 
 # Version Control
 
