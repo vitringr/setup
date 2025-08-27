@@ -1,4 +1,4 @@
--- Colorscheme: Kanagawa.
+-- TODO WIP
 
 return {
   "rebelot/kanagawa.nvim",

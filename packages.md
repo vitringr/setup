@@ -1,18 +1,15 @@
 git
 networkmanager
-alacritty
 neovim
 ttf-jetbrains-mono-nerd
 gammastep
 wmenu
-    otf-font-awesome
+otf-font-awesome
 wl-clipboard
-neofetch
 less
 nodejs
 npm
-neofetch
-vivaldi
+pnpm
 firefox
 imv
 tldr

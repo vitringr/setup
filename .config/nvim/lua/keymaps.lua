@@ -3,6 +3,7 @@ local map = vim.keymap.set
 -- Leader
 vim.g.mapleader = " "
 
+-- Previous
 map("n", "<C-o>", "<C-i>", { noremap = true, silent = true })
 map("n", "<C-i>", "<C-o>", { noremap = true, silent = true })
 
@@ -42,8 +43,6 @@ map({ "n", "v" }, "<leader>dd", vim.diagnostic.open_float, { desc = "Diagnostic"
 map({ "n", "v" }, "<leader>df", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
 
 -- LSP Global
-map({ "n", "v" }, "<leader>fg", "<cmd>LspInfo<CR>", { desc = "Info" })
-map({ "n", "v" }, "<leader>fr", "<cmd>LspRestart<CR>", { desc = "Restart" })
 map({ "n", "v" }, "<leader>ff", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })

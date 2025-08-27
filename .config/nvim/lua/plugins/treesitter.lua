@@ -1,43 +1,35 @@
 -- Provides better syntax highlighting and code understanding.
 
 return {
-  {
-    "windwp/nvim-ts-autotag",
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
+  "nvim-treesitter/nvim-treesitter",
 
-    build = ":TSUpdate",
+  branch = 'master',
 
-    dependencies = { "windwp/nvim-ts-autotag" },
+  dependencies = { "windwp/nvim-ts-autotag" },
 
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        auto_install = false,
-        ensure_installed = {
-          "bash",
-          "lua",
+  lazy = false,
 
-          "markdown",
-          "markdown_inline",
+  build = ":TSUpdate",
 
-          "html",
-          "css",
-          "javascript",
-          "typescript",
-          "tsx",
-          "json",
-
-          "glsl",
-          "hlsl",
-        },
-
-        highlight = { enable = true },
-        indent = { enable = true },
-      })
-    end,
-  },
+  config = function()
+    require("nvim-treesitter.configs").setup({
+      auto_install = false,
+      ensure_installed = {
+        "bash",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "query",
+        "c",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "glsl",
+        "hlsl",
+      },
+    })
+  end,
 }

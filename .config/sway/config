@@ -1,38 +1,29 @@
-### Variables:
+#############
+# Variables #
+#############
 
 set $mod Mod4
+
 set $left h
 set $down j
 set $up k
 set $right l
 
-
-
-
-### Launchers:
-
-set $term alacritty
-
+set $term foot
 set $menu wmenu-run
 
 
+##########
+# Output #
+##########
+
+# output * bg #363636 solid_color
+output * bg /home/doni/Downloads/background-waves.jpg fill
 
 
-### Output:
-
-# Commands to set resolution/refresh mode:
-#   swaymsg -t get_outputs
-#   swaymsg output DP-2 mode 2560x1440@144Hz
-
-output * bg #363636 solid_color
-
-# output DP-2 enable
-# output eDP-1 disable
-
-
-
-
-### Keybinds:
+############
+# Keybinds #
+############
 
 bindsym $mod+Return exec $term
 bindsym $mod+w exec $term
@@ -86,11 +77,6 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-
-
-
-### Resize:
-
 mode "resize" {
   bindsym $left resize shrink width 20px
   bindsym $down resize grow height 20px
@@ -104,9 +90,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-
-
-### Utilities:
+#############
+# Utilities #
+#############
 
 # Volume control via PulseAudio
 bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
@@ -123,20 +109,21 @@ bindsym Shift+Print exec grim
 bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +'%Y%m%d-%H%M%S').png
 
 
-
-
-### Status Bar:
+##############
+# Status Bar #
+##############
 
 exec waybar
 
-font pango:JetBrainsMono Nerd Font 10
 
-
-
-
-### Input:
+#########
+# Input #
+#########
 
 input type:keyboard {
+  repeat_rate 40
+  repeat_delay 220
+
   xkb_layout "us,bg(phonetic)"
   xkb_variant ","
 
@@ -145,33 +132,26 @@ input type:keyboard {
   #    to Super, basically swapping them:
   #    [Super][Alt][Space] => [Alt][Super][Space]
   # 3. Toggle between input languages with Alt+Space.
-  xkb_options "ctrl:nocaps,altwin:swap_alt_win,grp:alt_space_toggle"
 
-  repeat_rate 40
-  repeat_delay 220
+  xkb_options "ctrl:nocaps,altwin:swap_alt_win,grp:alt_space_toggle"
 }
 
 
-
-
-### Misc:
+########
+# Misc #
+########
 
 focus_wrapping no
-
 focus_follows_mouse no
-
 default_border none
-
-gaps inner 10
-
+gaps inner 8
 
 
-
-### Night Light:
+###############
+# Night Light #
+###############
 
 exec gammastep -O 5000
-
-
 
 
 ############################
