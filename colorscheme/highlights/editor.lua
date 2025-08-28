@@ -1,0 +1,251 @@
+-- ColorColumn: Used for the columns set with 'colorcolumn'.
+ColorColumn
+
+-- Conceal: Placeholder characters substituted for concealed
+Conceal
+
+-- CurSearch: Current match for the last search pattern (see 'hlsearch'). Note: This is correct after a search, but may get outdated if changes are made or the screen is redrawn.
+CurSearch
+
+-- Cursor: Character under the cursor.
+Cursor
+
+-- lCursor: Character under the cursor when language-mapping is used (see 'guicursor').
+lCursor
+
+-- CursorIM: Like Cursor, but used when in IME mode. CursorIM
+CursorIM
+
+-- CursorColumn: Screen-column at the cursor, when 'cursorcolumn' is set. hl-CursorLine  
+CursorColumn
+
+-- CursorLine: Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+CursorLine
+
+-- Directory: Directory names (and other special names in listings).
+Directory
+
+-- 	DiffAdd: Diff mode: Added line. diff.txt
+DiffAdd
+
+-- DiffChange: Diff mode: Changed line. diff.txt
+DiffChange
+
+-- DiffDelete: Diff mode: Deleted line. diff.txt
+DiffDelete
+
+-- DiffText: Diff mode: Changed text within a changed line. diff.txt
+DiffText
+
+-- DiffTextAdd: Diff mode: Added text within a changed line.  Linked to hl-DiffText by default. diff.txt
+DiffTextAdd
+
+-- EndOfBuffer: Filler lines (~) after the last line in the buffer. By default, this is highlighted like hl-NonText.
+EndOfBuffer
+
+-- TermCursor: Cursor in a focused terminal.
+TermCursor
+
+-- ErrorMsg: Error messages on the command line.
+ErrorMsg
+
+-- StderrMsg: Messages in stderr from shell commands.
+StderrMsg
+
+-- StdoutMsg: Messages in stdout from shell commands.
+StdoutMsg
+
+-- WinSeparator: Separators between window splits.
+WinSeparator
+
+-- 	Folded: Line used for closed folds.
+Folded
+
+-- FoldColumn: 'foldcolumn'
+FoldColumn
+
+-- SignColumn: Column where signs are displayed.
+SignColumn
+
+-- IncSearch: 'incsearch' highlighting; also used for the text replaced with ":s///c".
+IncSearch
+
+-- Substitute: :substitute replacement text highlighting.
+Substitute
+
+-- LineNr: Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+LineNr
+
+-- LineNrAbove: Line number for when the 'relativenumber' option is set, above the cursor line.
+LineNrAbove
+
+-- LineNrBelow: Line number for when the 'relativenumber' option is set, below the cursor line.
+LineNrBelow
+
+-- CursorLineNr: Like LineNr when 'cursorline' is set and 'cursorlineopt' contains "number" or is "both", for the cursor line.
+CursorLineNr
+
+-- CursorLineFold: Like FoldColumn when 'cursorline' is set for the cursor line.
+CursorLineFold
+
+-- CursorLineSign: Like SignColumn when 'cursorline' is set for the cursor line.
+CursorLineSign
+
+-- MatchParen: Character under the cursor or just before it, if it is a paired bracket, and its match. pi_paren.txt
+MatchParen
+
+-- ModeMsg: 'showmode' message (e.g., "-- INSERT --").
+ModeMsg
+
+-- MsgArea: Area for messages and command-line, see also 'cmdheight'.
+MsgArea
+
+-- MsgSeparator: Separator for scrolled messages msgsep.
+MsgSeparator
+
+-- MoreMsg: more-prompt  
+MoreMsg
+
+-- NonText: '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also hl-EndOfBuffer.
+NonText
+
+-- Normal: Normal text.
+Normal
+
+-- NormalFloat: Normal text in floating windows.
+NormalFloat
+
+-- FloatBorder: Border of floating windows.
+FloatBorder
+
+-- FloatTitle: Title of floating windows.
+FloatTitle
+
+-- FloatFooter: Footer of floating windows.
+FloatFooter
+
+-- NormalNC: Normal text in non-current windows.
+NormalNC
+
+-- Pmenu: Popup menu: Normal item.
+Pmenu
+
+-- PmenuSel: Popup menu: Selected item. Combined with hl-Pmenu.
+PmenuSel
+
+-- PmenuKind: Popup menu: Normal item "kind".
+PmenuKind
+
+-- PmenuKindSel: Popup menu: Selected item "kind".
+PmenuKindSel
+
+-- PmenuExtra: Popup menu: Normal item "extra text".
+PmenuExtra
+
+-- PmenuExtraSel: Popup menu: Selected item "extra text".
+PmenuExtraSel
+
+-- PmenuSbar: Popup menu: Scrollbar.
+PmenuSbar
+
+-- PmenuThumb: Popup menu: Thumb of the scrollbar.
+PmenuThumb
+
+-- PmenuMatch: Popup menu: Matched text in normal item. Combined with hl-Pmenu.
+PmenuMatch
+
+-- PmenuMatchSel: Popup menu: Matched text in selected item. Combined with hl-PmenuMatch and hl-PmenuSel.
+PmenuMatchSel
+
+-- ComplMatchIns: Matched text of the currently inserted completion.
+ComplMatchIns
+
+-- ComplHint: Virtual text of the currently selected completion.
+ComplHint
+
+-- ComplHintMore: The additional information of the virtual text.
+ComplHintMore
+
+-- Question: hit-enter prompt and yes/no questions.
+Question
+
+-- QuickFixLine: Current quickfix item in the quickfix window. Combined with hl-CursorLine when the cursor is there.
+QuickFixLine
+
+-- Search: Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+Search
+
+-- SnippetTabstop: Tabstops in snippets. vim.snippet
+SnippetTabstop
+
+-- SnippetTabstopActive: The currently active tabstop. vim.snippet
+SnippetTabstopActive
+
+-- SpecialKey: Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. hl-Whitespace
+SpecialKey
+
+-- SpellBad: Word that is not recognized by the spellchecker. spell Combined with the highlighting used otherwise.
+SpellBad
+
+-- SpellCap: Word that should start with a capital. spell Combined with the highlighting used otherwise.
+SpellCap
+
+-- SpellLocal: Word that is recognized by the spellchecker as one that is used in another region. spell Combined with the highlighting used otherwise.
+SpellLocal
+
+-- SpellRare: Word that is recognized by the spellchecker as one that is hardly ever used. spell Combined with the highlighting used otherwise.
+SpellRare
+
+-- StatusLine: Status line of current window.
+StatusLine
+
+-- StatusLineNC: Status lines of not-current windows.
+StatusLineNC
+
+-- StatusLineTerm: Status line of terminal window.
+StatusLineTerm
+
+-- StatusLineTermNC: Status line of non-current terminal windows.
+StatusLineTermNC
+
+-- TabLine: Tab pages line, not active tab page label.
+TabLine
+
+-- TabLineFill: Tab pages line, where there are no labels.
+TabLineFill
+
+-- TabLineSel: Tab pages line, active tab page label.
+TabLineSel
+
+-- Title: Titles for output from ":set all", ":autocmd" etc.
+Title
+
+-- Visual: Visual mode selection.
+Visual
+
+-- VisualNOS: Visual mode selection when vim is "Not Owning the Selection".
+VisualNOS
+
+-- WarningMsg: Warning messages.
+WarningMsg
+
+-- Whitespace: "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
+Whitespace
+
+-- WildMenu: Current match in 'wildmenu' completion.
+WildMenu
+
+-- WinBar: Window bar of current window.
+WinBar
+
+-- WinBarNC: Window bar of not-current windows. hl-User1 hl-User1..9 hl-User9 The 'statusline' syntax allows the use of 9 different highlights in the statusline and ruler (via 'rulerformat').  The names are User1 to User9. For the GUI you can use the following groups to set the colors for the menu, scrollbars and tooltips.  They don't have defaults.  This doesn't work for the Win32 GUI.  Only three highlight arguments have any effect here: font, guibg, and guifg.
+WinBarNC
+
+-- Menu: Current font, background and foreground colors of the menus. Also used for the toolbar. Applicable highlight arguments: font, guibg, guifg.
+Menu
+
+-- Scrollbar: Current background and foreground of the main window's scrollbars. Applicable highlight arguments: guibg, guifg.
+Scrollbar
+
+-- Tooltip: Current font, background and foreground of the tooltips. Applicable highlight arguments: font, guibg, guifg.
+Tooltip
