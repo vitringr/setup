@@ -6,13 +6,6 @@ Black:
     "#2A2A37": sumiInk4
     "#363646": sumiInk5
     "#54546D": sumiInk6
-    "#0D0C0C": dragonBlack0
-    "#12120F": dragonBlack1
-    "#1D1C19": dragonBlack2
-    "#181616": dragonBlack3
-    "#282727": dragonBlack4
-    "#393836": dragonBlack5
-    "#625E5A": dragonBlack6
 
 White: 
     "#727169": fujiGray
