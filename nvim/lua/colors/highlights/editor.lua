@@ -110,10 +110,10 @@ u.setHL(0, "Folded", { fg = c.ui.special, bg = "NONE" })
 --
 -- -- MsgSeparator: Separator for scrolled messages msgsep.
 -- MsgSeparator
---
--- -- MoreMsg: more-prompt  
--- MoreMsg
---
+
+-- MoreMsg: more-prompt  
+u.setHL(0, "MoreMsg", { fg = c.ui.more_msg })
+
 -- -- NonText: '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also hl-EndOfBuffer.
 -- NonText
 
@@ -191,18 +191,18 @@ u.setHL(0, "Search", { bg = c.ui.bg_search })
 --
 -- -- SpecialKey: Unprintable characters: Text displayed differently from what it really is. But not 'listchars' whitespace. hl-Whitespace
 -- SpecialKey
---
--- -- SpellBad: Word that is not recognized by the spellchecker. spell Combined with the highlighting used otherwise.
--- SpellBad
---
--- -- SpellCap: Word that should start with a capital. spell Combined with the highlighting used otherwise.
--- SpellCap
---
--- -- SpellLocal: Word that is recognized by the spellchecker as one that is used in another region. spell Combined with the highlighting used otherwise.
--- SpellLocal
---
--- -- SpellRare: Word that is recognized by the spellchecker as one that is hardly ever used. spell Combined with the highlighting used otherwise.
--- SpellRare
+
+-- SpellBad: Word that is not recognized by the spellchecker. spell Combined with the highlighting used otherwise.
+u.setHL(0, "SpellBad", { sp = c.diag.error, undercurl = true })
+
+-- SpellCap: Word that should start with a capital. spell Combined with the highlighting used otherwise.
+u.setHL(0, "SpellCap", { sp = c.diag.warning, undercurl = true })
+
+-- SpellLocal: Word that is recognized by the spellchecker as one that is used in another region. spell Combined with the highlighting used otherwise.
+u.setHL(0, "SpellLocal", { sp = c.diag.warning, undercurl = true })
+
+-- SpellRare: Word that is recognized by the spellchecker as one that is hardly ever used. spell Combined with the highlighting used otherwise.
+u.setHL(0, "SpellRare", { sp = c.diag.warning, undercurl = true })
 
 -- StatusLine: Status line of current window.
 u.setHL(0, "StatusLine", { fg = "NONE", bg = c.ui.bg_p1 })
@@ -236,9 +236,9 @@ u.cmd("hi! link VisualNOS Visual");
 
 -- -- WarningMsg: Warning messages.
 -- WarningMsg
---
--- -- Whitespace: "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
--- Whitespace
+
+-- Whitespace: "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
+u.setHL(0, "Whitespace", { fg = c.ui.whitespace })
 
 -- WildMenu: Current match in 'wildmenu' completion.
 u.cmd("hi! link WildMenu Pmenu");

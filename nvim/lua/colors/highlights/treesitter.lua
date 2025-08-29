@@ -6,38 +6,38 @@ local u = require("colors/utilities")
 -- @variable: various variable names
 u.setHL(0, "@variable", { fg = c.syntax.variable })
 
--- -- @variable.builtin: built-in variable names (e.g. this, self)
--- @variable.builtin
+-- @variable.builtin: built-in variable names (e.g. this, self)
+u.setHL(0, "@variable.builtin", { fg = c.syntax.builtin })
 
 -- @variable.parameter: parameters of a function
 u.setHL(0, "@variable.parameter", { fg = c.syntax.parameter })
 
--- -- @variable.parameter.builtin: special parameters (e.g. _, it)
--- @variable.parameter.builtin
---
--- -- @variable.member: object and struct fields
--- @variable.member
+-- @variable.parameter.builtin: special parameters (e.g. _, it)
+u.setHL(0, "@variable.parameter.builtin", { fg = c.syntax.builtin })
+
+-- @variable.member: object and struct fields
+u.setHL(0, "@variable.member", { fg = c.syntax.property })
 
 -- @constant: constant identifiers
-u.cmd("hi! link @constant Constant");
+u.setHL(0, "@constant", { fg = c.syntax.constant })
 
--- -- @constant.builtin: built-in constant values
--- @constant.builtin
---
+-- @constant.builtin: built-in constant values
+u.setHL(0, "@constant.builtin", { fg = c.syntax.builtin })
+
 -- -- @constant.macro: constants defined by the preprocessor
 -- @constant.macro
 
 -- @module: modules or namespaces
 u.setHL(0, "@module", { fg = c.syntax.module })
 
--- -- @module.builtin: built-in modules or namespaces
--- @module.builtin
---
+-- @module.builtin: built-in modules or namespaces
+u.setHL(0, "@module.builtin", { fg = c.syntax.builtin })
+
 -- -- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
 -- @label
 
 -- @string: string literals
-u.cmd("hi! link @string String");
+u.setHL(0, "@string", { fg = c.syntax.string })
 
 -- -- @string.documentation: string documenting code (e.g. Python docstrings)
 -- @string.documentation
@@ -61,44 +61,44 @@ u.setHL(0, "@string.regexp", { fg = c.syntax.regexp })
 -- @string.special.url
 
 -- @character: character literals
-u.cmd("hi! link @character Character");
+u.setHL(0, "@character", { fg = c.syntax.string })
 
 -- @character.special: special characters (e.g. wildcards)
-u.cmd("hi! link @character.special SpecialChar");
-
--- @boolean: boolean literals
-u.cmd("hi! link @boolean Boolean");
+u.setHL(0, "@character.special", { fg = c.syntax.specialchar })
 
 -- @number: numeric literals
-u.cmd("hi! link @number Number");
+u.setHL(0, "@number", { fg = c.syntax.number })
 
 -- @number.float: floating-point number literals
-u.cmd("hi! link @number.float Float");
+u.cmd("hi! link @number.float @number")
+
+-- @boolean: boolean literals
+u.cmd("hi! link @boolean @number")
 
 -- @type: type or class definitions and annotations
-u.cmd("hi! link @type Type");
+u.setHL(0, "@type", { fg = c.syntax.type })
 
--- -- @type.builtin: built-in types
--- @type.builtin
---
+-- @type.builtin: built-in types
+u.setHL(0, "@type.builtin", { fg = c.syntax.builtin })
+
 -- -- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
 -- @type.definition
 --
 -- -- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
 -- @attribute
---
--- -- @attribute.builtin: builtin annotations (e.g. @property in Python)
--- @attribute.builtin
+
+-- @attribute.builtin: builtin annotations (e.g. @property in Python)
+u.setHL(0, "@attribute.builtin", { fg = c.syntax.builtin })
 
 -- @property: the key in key/value pairs
 u.setHL(0, "@property", { fg = c.syntax.property })
 
 -- @function: function definitions
-u.cmd("hi! link @function Function");
+u.setHL(0, "@function", { fg = c.syntax.procedure })
 
--- -- @function.builtin: built-in functions
--- @function.builtin
---
+-- @function.builtin: built-in functions
+u.setHL(0, "@function.builtin", { fg = c.syntax.builtin })
+
 -- -- @function.call: function calls
 -- @function.call
 --
@@ -106,11 +106,11 @@ u.cmd("hi! link @function Function");
 -- @function.macro
 
 -- @function.method: method definitions
-u.cmd("hi! link @function.method Function");
+u.cmd("hi! link @function.method @function");
 
--- -- @function.method.call: method calls
--- @function.method.call
---
+-- @function.method.call: method calls
+u.cmd("hi! link @function.method.call @function.method")
+
 -- -- @constructor: constructor calls and definitions
 -- @constructor
 
@@ -118,41 +118,41 @@ u.cmd("hi! link @function.method Function");
 u.cmd("hi! link @operator Operator");
 
 -- @keyword: keywords not fitting into specific categories
-u.cmd("hi! link @keyword Keyword");
+u.setHL(0, "@keyword", { fg = c.syntax.keyword, italic = true })
 
 -- -- @keyword.coroutine: keywords related to coroutines (e.g. go in Go, async/await in Python)
 -- @keyword.coroutine
---
--- -- @keyword.function: keywords that define a function (e.g. func in Go, def in Python)
--- @keyword.function
---
+
+-- @keyword.function: keywords that define a function (e.g. func in Go, def in Python)
+u.cmd("hi! link @keyword.function @keyword")
+
 -- -- @keyword.operator: operators that are English words (e.g. and, or)
 -- @keyword.operator
---
--- -- @keyword.import: keywords for including or exporting modules (e.g. import, from in Python)
--- @keyword.import
---
--- -- @keyword.type: keywords describing namespaces and composite types (e.g. struct, enum)
--- @keyword.type
---
--- -- @keyword.modifier: keywords modifying other constructs (e.g. const, static, public)
--- @keyword.modifier
---
--- -- @keyword.repeat: keywords related to loops (e.g. for, while)
--- @keyword.repeat
---
--- -- @keyword.return: keywords like return and yield
--- @keyword.return
---
+
+-- @keyword.import: keywords for including or exporting modules (e.g. import, from in Python)
+u.setHL(0, "@keyword.import", { fg = c.syntax.preproc })
+
+-- @keyword.type: keywords describing namespaces and composite types (e.g. struct, enum)
+u.cmd("hi! link @keyword.type @keyword")
+
+-- @keyword.modifier: keywords modifying other constructs (e.g. const, static, public)
+u.cmd("hi! link @keyword.modifier @keyword")
+
+-- @keyword.repeat: keywords related to loops (e.g. for, while)
+u.cmd("hi! link @keyword.repeat @keyword")
+
+-- @keyword.return: keywords like return and yield
+u.cmd("hi! link @keyword.return @keyword")
+
 -- -- @keyword.debug: keywords related to debugging
 -- @keyword.debug
---
--- -- @keyword.exception: keywords related to exceptions (e.g. throw, catch)
--- @keyword.exception
---
--- -- @keyword.conditional: keywords related to conditionals (e.g. if, else)
--- @keyword.conditional
---
+
+-- @keyword.exception: keywords related to exceptions (e.g. throw, catch)
+u.setHL(0, "@keyword.exception", { fg = c.syntax.exception })
+
+-- @keyword.conditional: keywords related to conditionals (e.g. if, else)
+u.cmd("hi! link @keyword.conditional @keyword")
+
 -- -- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
 -- @keyword.conditional.ternary
 --
@@ -263,10 +263,10 @@ u.setHL(0, "@diff.delta", { fg = c.vcs.changed })
 
 -- -- @tag: XML-style tag names (e.g. in XML, HTML, etc.)
 -- @tag
---
--- -- @tag.builtin: builtin tag names (e.g. HTML5 tags)
--- @tag.builtin
---
+
+-- @tag.builtin: builtin tag names (e.g. HTML5 tags)
+u.setHL(0, "@tag.builtin", { fg = c.syntax.builtin })
+
 -- -- @tag.attribute: XML-style tag attributes
 -- @tag.attribute
 --

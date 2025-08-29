@@ -47,12 +47,14 @@ vim.opt.fillchars:append({    -- Remove fold fillchars
   fold = " "
 })
 
+vim.opt.showmode = false      -- Display -- MODE -- message
+
 vim.diagnostic.config({
-  virtual_text = false,     -- Inline text
-  signs = true,             -- Sign column
-  underline = true,         -- Underlines
-  update_in_insert = false, -- Updates in insert mode
-  severity_sort = true,     -- Sort by severity
+  virtual_text = false,       -- Inline text
+  signs = true,               -- Sign column
+  underline = true,           -- Underlines
+  update_in_insert = false,   -- Updates in insert mode
+  severity_sort = true,       -- Sort by severity
 })
 
 g.loaded_node_provider = 0

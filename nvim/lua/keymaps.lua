@@ -1,27 +1,26 @@
 local map = vim.keymap.set
 
--- Debug
+-- Debug --
 map("n", "<C-k>", "<cmd>Inspect<CR>", { noremap = true })
 
--- Leader
+-- Leader --
 vim.g.mapleader = " "
 
--- Previous
+-- Previous --
 map("n", "<C-o>", "<C-i>", { noremap = true, silent = true })
 map("n", "<C-i>", "<C-o>", { noremap = true, silent = true })
 
--- Terminal
+-- Terminal --
 map({ "n", "v" }, "<leader>t", "<cmd>terminal<CR>", { desc = "Terminal" })
-map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Terminal Unselect" })
 map("t", "<C-Space>", "<C-\\><C-n>", { desc = "Terminal Unselect" })
 
--- Splits
+-- Splits --
 map({ "n", "v" }, "<C-A-h>", "<C-w><", { desc = "Decrease Width" })
 map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
 map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
 map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
 
--- Workspace
+-- Workspace --
 map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
 map({ "n", "v" }, "<leader>x", function()
   local wrap_status = vim.wo.wrap
@@ -29,29 +28,28 @@ map({ "n", "v" }, "<leader>x", function()
   vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
 
--- Telescope
+-- Telescope --
 map({ "n", "v" }, "<leader>q", "<cmd>Telescope<CR>", { desc = "Telescope" })
 map({ "n", "v" }, "<leader>w", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
 map({ "n", "v" }, "<leader>e", "<cmd>Telescope find_files<CR>", { desc = "Find Files" })
 map({ "n", "v" }, "<leader>r", "<cmd>Telescope oldfiles<CR>", { desc = "Oldfiles" })
 
--- Oil
+-- Oil --
 map({ "n", "v" }, "<leader>a", "<cmd>Oil<CR>", { desc = "Oil" })
 
--- LSP Target
-map({ "n", "v" }, "<leader>da", vim.lsp.buf.code_action, { desc = "Code Action" })
-map({ "n", "v" }, "<leader>dr", vim.lsp.buf.rename, { desc = "Rename" })
+-- LSP Target --
+map({ "n", "v" }, "<leader>da", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
+map({ "n", "v" }, "<leader>dq", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
 map({ "n", "v" }, "<leader>ds", "<cmd>Telescope lsp_references<CR>", { desc = "References" })
 map({ "n", "v" }, "<leader>dd", vim.diagnostic.open_float, { desc = "Diagnostic" })
-map({ "n", "v" }, "<leader>df", "<cmd>Telescope lsp_definitions<CR>", { desc = "Definition" })
+map({ "n", "v" }, "<leader>dc", vim.lsp.buf.code_action, { desc = "Code Action" })
+map({ "n", "v" }, "<leader>dr", vim.lsp.buf.rename, { desc = "Rename" })
 
--- LSP Global
-map({ "n", "v" }, "<leader>ff", function()
-  vim.lsp.buf.format({ async = true })
-end, { desc = "Format" })
+-- LSP Global --
+map({ "n", "v" }, "<leader>=", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format" })
 map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostics" })
 
--- Obsidian
+-- Obsidian --
 map({ "n", "v" }, "<leader>oo", "<cmd>Obsidian open<cr>", { desc = "Open" })
 map({ "n", "v" }, "<leader>oh", "<cmd>Obsidian check<cr>", { desc = "Health" })
 

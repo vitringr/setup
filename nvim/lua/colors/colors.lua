@@ -7,6 +7,8 @@ M.ui = {
   directory     = "#7E9CD8",
   title         = "#7E9CD8",
   win_separator = "#54546D",
+  more_msg      = "#658594",
+  mode_msg      = "#FF9E3B",
 
   --
   fg_dim     = "#C8C093",
@@ -34,8 +36,8 @@ M.ui = {
     fg       = "#DCD7BA",
     fg_sel   = "none",
     bg       = "#223249",
-    bg_sel   = "#2D4F67",
     bg_sbar  = "#223249",
+    bg_sel   = "#2D4F67",
     bg_thumb = "#2D4F67",
   },
 
@@ -47,10 +49,10 @@ M.ui = {
   },
 }
 
--- Probably don't use the default fg_dim here.
+-- Probably don't use the default fg_dim here?
 M.syntax = {
   variable    = "#DCD7BA",
-  constant    = "#FFA066",
+  constant    = "#DCD7BA",
   number      = "#FFA066",
   identifier  = "#E6C384",
   property    = "#E6C384",
@@ -70,6 +72,7 @@ M.syntax = {
   delimiter   = "#9CABCA",
   exception   = "#E46876",
   preproc     = "#D27E99",
+  builtin     = "#7FB4CA", -- #C34043 ?
 
   module      = "#938056",
 
