@@ -14,7 +14,10 @@ local colors = {
   oldWhite      = "#C8C093"
 }
 
+
 M.theme = {
+  -- Note: To avoid flicker, set the 'StatusLine' highlight
+  -- group to be the same as the default background color.
   normal = {
     a = { bg = colors.crystalBlue,  fg = colors.sumiInk0 },
     b = { bg = colors.winterBlue,   fg = colors.crystalBlue },

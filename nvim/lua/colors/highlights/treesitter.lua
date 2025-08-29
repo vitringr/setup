@@ -16,7 +16,7 @@ u.setHL(0, "@variable.parameter", { fg = c.syntax.parameter })
 -- @variable.parameter.builtin
 --
 -- -- @variable.member: object and struct fields
--- @variable.member             
+-- @variable.member
 
 -- @constant: constant identifiers
 u.cmd("hi! link @constant Constant");
@@ -26,10 +26,10 @@ u.cmd("hi! link @constant Constant");
 --
 -- -- @constant.macro: constants defined by the preprocessor
 -- @constant.macro
---
--- -- @module: modules or namespaces
--- @module
---
+
+-- @module: modules or namespaces
+u.setHL(0, "@module", { fg = c.syntax.module })
+
 -- -- @module.builtin: built-in modules or namespaces
 -- @module.builtin
 --
@@ -89,9 +89,9 @@ u.cmd("hi! link @type Type");
 --
 -- -- @attribute.builtin: builtin annotations (e.g. @property in Python)
 -- @attribute.builtin
---
--- -- @property: the key in key/value pairs
--- @property
+
+-- @property: the key in key/value pairs
+u.setHL(0, "@property", { fg = c.syntax.property })
 
 -- @function: function definitions
 u.cmd("hi! link @function Function");
@@ -165,9 +165,9 @@ u.cmd("hi! link @keyword Keyword");
 -- @punctuation.delimiter: delimiters (e.g. ;, ., ,)
 u.cmd("hi! link @punctuation.delimiter Delimiter");
 
--- -- @punctuation.bracket: brackets (e.g. (), {}, [])
--- @punctuation.bracket
---
+-- @punctuation.bracket: brackets (e.g. (), {}, [])
+u.cmd("hi! link @punctuation.bracket Delimiter");
+
 -- -- @punctuation.special: special symbols (e.g. {} in string interpolation)
 -- @punctuation.special
 

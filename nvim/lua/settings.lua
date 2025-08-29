@@ -11,6 +11,8 @@ o.undofile = true             -- Enable persistent undo.
 o.ignorecase = true           -- Ignore case when searching.
 o.smartcase = true            -- Use case-sensitive search if any uppercase characters are used.
 
+o.laststatus = 3              -- Global statusline
+
 o.smartindent = true          -- Automatically adjust indentation based on syntax.
 o.expandtab = true            -- Use spaces instead of tabs for indentation.
 o.shiftwidth = 2              -- Number of spaces for each indentation level.
@@ -40,6 +42,10 @@ o.termguicolors = true        -- Enable 24-bit RGB colors.
 vim.opt.shortmess:append("I") -- Disable welcome message.
 
 vim.opt.iskeyword:remove("_") -- Treat "_" as a symbol.
+
+vim.opt.fillchars:append({    -- Remove fold fillchars
+  fold = " "
+})
 
 vim.diagnostic.config({
   virtual_text = false,     -- Inline text

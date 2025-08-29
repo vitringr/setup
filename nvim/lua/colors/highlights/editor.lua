@@ -10,10 +10,10 @@ local u = require("colors/utilities")
 -- Conceal
 
 -- CurSearch: Current match for the last search pattern (see 'hlsearch'). Note: This is correct after a search, but may get outdated if changes are made or the screen is redrawn.
-u.setHL(0, "CurSearch", { fg = c.ui.fg, bg = c.ui.bg_search })
+u.setHL(0, "CurSearch", { fg = c.ui.fg_light, bg = c.ui.bg_search })
 
 -- Cursor: Character under the cursor.
-u.setHL(0, "Cursor", { fg = c.ui.bg, bg = c.ui.fg })
+u.setHL(0, "Cursor", { fg = c.ui.bg, bg = c.ui.fg_light })
 
 -- lCursor: Character under the cursor when language-mapping is used (see 'guicursor').
 u.cmd("hi! link lCursor Cursor");
@@ -51,24 +51,27 @@ u.setHL(0, "DiffText", { bg = c.diff.text })
 -- -- TermCursor: Cursor in a focused terminal.
 -- TermCursor
 --
--- -- ErrorMsg: Error messages on the command line.
--- ErrorMsg
---
+-- ErrorMsg: Error messages on the command line.
+u.setHL(0, "ErrorMsg", { fg = c.diag.error })
+
 -- -- StderrMsg: Messages in stderr from shell commands.
 -- StderrMsg
 --
 -- -- StdoutMsg: Messages in stdout from shell commands.
 -- StdoutMsg
 --
--- -- WinSeparator: Separators between window splits.
--- WinSeparator
---
--- -- 	Folded: Line used for closed folds.
--- Folded
---
--- -- FoldColumn: 'foldcolumn'
+-- WinSeparator: Separators between window splits.
+u.setHL(0, "WinSeparator", { fg = c.ui.win_separator, bg = "NONE" })
+
+-- TODO
+u.cmd("hi! link VertSplit WinSeparator");
+
+-- Folded: Line used for closed folds.
+u.setHL(0, "Folded", { fg = c.ui.special, bg = "NONE" })
+
+-- FoldColumn: 'foldcolumn'
 -- FoldColumn
---
+
 -- -- SignColumn: Column where signs are displayed.
 -- SignColumn
 --
@@ -113,10 +116,10 @@ u.setHL(0, "DiffText", { bg = c.diff.text })
 --
 -- -- NonText: '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also hl-EndOfBuffer.
 -- NonText
---
--- -- Normal: Normal text.
--- u.setHL(0, "Normal", { fg = c.ui.fg, bg = c.ui.bg })
---
+
+-- Normal: Normal text.
+u.setHL(0, "Normal", { fg = c.ui.fg_dim })
+
 -- NormalFloat: Normal text in floating windows.
 u.setHL(0, "NormalFloat", { fg = c.ui.float.fg, bg = c.ui.float.bg })
 
@@ -200,19 +203,19 @@ u.setHL(0, "Search", { bg = c.ui.bg_search })
 --
 -- -- SpellRare: Word that is recognized by the spellchecker as one that is hardly ever used. spell Combined with the highlighting used otherwise.
 -- SpellRare
---
--- -- StatusLine: Status line of current window.
--- StatusLine
---
--- -- StatusLineNC: Status lines of not-current windows.
--- StatusLineNC
---
--- -- StatusLineTerm: Status line of terminal window.
--- StatusLineTerm
---
--- -- StatusLineTermNC: Status line of non-current terminal windows.
--- StatusLineTermNC
---
+
+-- StatusLine: Status line of current window.
+u.setHL(0, "StatusLine", { fg = "NONE", bg = c.ui.bg_p1 })
+
+-- StatusLineNC: Status lines of not-current windows.
+u.cmd("hi! link StatusLineNC StatusLine");
+
+-- StatusLineTerm: Status line of terminal window.
+u.cmd("hi! link StatusLineTerm StatusLine");
+
+-- StatusLineTermNC: Status line of non-current terminal windows.
+u.cmd("hi! link StatusLineTermNC StatusLine");
+
 -- -- TabLine: Tab pages line, not active tab page label.
 -- TabLine
 --
@@ -236,16 +239,16 @@ u.cmd("hi! link VisualNOS Visual");
 --
 -- -- Whitespace: "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
 -- Whitespace
---
--- -- WildMenu: Current match in 'wildmenu' completion.
--- WildMenu
---
--- -- WinBar: Window bar of current window.
--- WinBar
---
--- -- WinBarNC: Window bar of not-current windows. hl-User1 hl-User1..9 hl-User9 The 'statusline' syntax allows the use of 9 different highlights in the statusline and ruler (via 'rulerformat').  The names are User1 to User9. For the GUI you can use the following groups to set the colors for the menu, scrollbars and tooltips.  They don't have defaults.  This doesn't work for the Win32 GUI.  Only three highlight arguments have any effect here: font, guibg, and guifg.
--- WinBarNC
---
+
+-- WildMenu: Current match in 'wildmenu' completion.
+u.cmd("hi! link WildMenu Pmenu");
+
+-- WinBar: Window bar of current window.
+u.setHL(0, "WinBar", { fg = c.ui.fg_dim, bg = "NONE" })
+
+-- WinBarNC: Window bar of not-current windows. hl-User1 hl-User1..9 hl-User9 The 'statusline' syntax allows the use of 9 different highlights in the statusline and ruler (via 'rulerformat').  The names are User1 to User9. For the GUI you can use the following groups to set the colors for the menu, scrollbars and tooltips.  They don't have defaults.  This doesn't work for the Win32 GUI.  Only three highlight arguments have any effect here: font, guibg, and guifg.
+u.cmd("hi! link WinBarNC WinBar");
+
 -- -- Menu: Current font, background and foreground colors of the menus. Also used for the toolbar. Applicable highlight arguments: font, guibg, guifg.
 -- Menu
 --

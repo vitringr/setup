@@ -4,12 +4,13 @@ local M = {}
 --    parameter and field should be different
 
 M.ui = {
-  directory = "#7E9CD8",
-  title     = "#7E9CD8",
+  directory     = "#7E9CD8",
+  title         = "#7E9CD8",
+  win_separator = "#54546D",
 
   --
-  fg         = "#DCD7BA",
   fg_dim     = "#C8C093",
+  fg_light   = "#DCD7BA",
   fg_reverse = "#223249",
 
   bg_dim     = "#181820",
@@ -46,12 +47,14 @@ M.ui = {
   },
 }
 
+-- Probably don't use the default fg_dim here.
 M.syntax = {
-  variable    = "none",
+  variable    = "#DCD7BA",
   constant    = "#FFA066",
-  identifier  = "#E6C384",
-  parameter   = "#B8B4D0",
   number      = "#FFA066",
+  identifier  = "#E6C384",
+  property    = "#E6C384",
+  parameter   = "#B8B4D0",
   string      = "#98BB6C",
   specialchar = "#76946A",
   regexp      = "#C0A36E",
@@ -67,6 +70,8 @@ M.syntax = {
   delimiter   = "#9CABCA",
   exception   = "#E46876",
   preproc     = "#D27E99",
+
+  module      = "#938056",
 
   special3    = "#E46876",
   special4    = "#FF5D62",
