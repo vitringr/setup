@@ -1,0 +1,95 @@
+-- -- DiagnosticError: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+-- DiagnosticError
+--
+-- -- DiagnosticWarn: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+-- DiagnosticWarn
+--
+-- -- DiagnosticInfo: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+-- DiagnosticInfo
+--
+-- -- DiagnosticHint: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+-- DiagnosticHint
+--
+-- -- DiagnosticOk: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+-- DiagnosticOk
+--
+-- -- DiagnosticVirtualTextError: Used for "Error" diagnostic virtual text.
+-- DiagnosticVirtualTextError
+--
+-- -- DiagnosticVirtualTextWarn: Used for "Warn" diagnostic virtual text.
+-- DiagnosticVirtualTextWarn
+--
+-- -- DiagnosticVirtualTextInfo: Used for "Info" diagnostic virtual text.
+-- DiagnosticVirtualTextInfo
+--
+-- -- DiagnosticVirtualTextHint: Used for "Hint" diagnostic virtual text.
+-- DiagnosticVirtualTextHint
+--
+-- -- DiagnosticVirtualTextOk: Used for "Ok" diagnostic virtual text.
+-- DiagnosticVirtualTextOk
+--
+-- -- DiagnosticVirtualLinesError: Used for "Error" diagnostic virtual lines.
+-- DiagnosticVirtualLinesError
+--
+-- -- DiagnosticVirtualLinesWarn: Used for "Warn" diagnostic virtual lines.
+-- DiagnosticVirtualLinesWarn
+--
+-- -- DiagnosticVirtualLinesInfo: Used for "Info" diagnostic virtual lines.
+-- DiagnosticVirtualLinesInfo
+--
+-- -- DiagnosticVirtualLinesHint: Used for "Hint" diagnostic virtual lines.
+-- DiagnosticVirtualLinesHint
+--
+-- -- DiagnosticVirtualLinesOk: Used for "Ok" diagnostic virtual lines.
+-- DiagnosticVirtualLinesOk
+--
+-- -- DiagnosticUnderlineError: Used to underline "Error" diagnostics.
+-- DiagnosticUnderlineError
+--
+-- -- DiagnosticUnderlineWarn: Used to underline "Warn" diagnostics.
+-- DiagnosticUnderlineWarn
+--
+-- -- DiagnosticUnderlineInfo: Used to underline "Info" diagnostics.
+-- DiagnosticUnderlineInfo
+--
+-- -- DiagnosticUnderlineHint: Used to underline "Hint" diagnostics.
+-- DiagnosticUnderlineHint
+--
+-- -- DiagnosticUnderlineOk: Used to underline "Ok" diagnostics.
+-- DiagnosticUnderlineOk
+--
+-- -- DiagnosticFloatingError: Used to color "Error" diagnostic messages in diagnostics float. See vim.diagnostic.open_float()
+-- DiagnosticFloatingError
+--
+-- -- DiagnosticFloatingWarn: Used to color "Warn" diagnostic messages in diagnostics float.
+-- DiagnosticFloatingWarn
+--
+-- -- DiagnosticFloatingInfo: Used to color "Info" diagnostic messages in diagnostics float.
+-- DiagnosticFloatingInfo
+--
+-- -- DiagnosticFloatingHint: Used to color "Hint" diagnostic messages in diagnostics float.
+-- DiagnosticFloatingHint
+--
+-- -- DiagnosticFloatingOk: Used to color "Ok" diagnostic messages in diagnostics float.
+-- DiagnosticFloatingOk
+--
+-- -- DiagnosticSignError: Used for "Error" signs in sign column.
+-- DiagnosticSignError
+--
+-- -- DiagnosticSignWarn: Used for "Warn" signs in sign column.
+-- DiagnosticSignWarn
+--
+-- -- DiagnosticSignInfo: Used for "Info" signs in sign column.
+-- DiagnosticSignInfo
+--
+-- -- DiagnosticSignHint: Used for "Hint" signs in sign column.
+-- DiagnosticSignHint
+--
+-- -- DiagnosticSignOk: Used for "Ok" signs in sign column.
+-- DiagnosticSignOk
+--
+-- -- DiagnosticDeprecated: Used for deprecated or obsolete code.
+-- DiagnosticDeprecated
+--
+-- -- DiagnosticUnnecessary: Used for unnecessary or unused code.
+-- DiagnosticUnnecessary

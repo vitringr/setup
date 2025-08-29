@@ -1,0 +1,269 @@
+-- -- @variable: various variable names
+-- @variable
+--
+-- -- @variable.builtin: built-in variable names (e.g. this, self)
+-- @variable.builtin
+--
+-- -- @variable.parameter: parameters of a function
+-- @variable.parameter          
+--
+-- -- @variable.parameter.builtin: special parameters (e.g. _, it)
+-- @variable.parameter.builtin  
+--
+-- -- @variable.member: object and struct fields
+-- @variable.member             
+--
+-- -- @constant: constant identifiers
+-- @constant                    
+--
+-- -- @constant.builtin: built-in constant values
+-- @constant.builtin            
+--
+-- -- @constant.macro: constants defined by the preprocessor
+-- @constant.macro              
+--
+-- -- @module: modules or namespaces
+-- @module                      
+--
+-- -- @module.builtin: built-in modules or namespaces
+-- @module.builtin              
+--
+-- -- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
+-- @label                       
+--
+-- -- @string: string literals
+-- @string                      
+--
+-- -- @string.documentation: string documenting code (e.g. Python docstrings)
+-- @string.documentation        
+--
+-- -- @string.regexp: regular expressions
+-- @string.regexp               
+--
+-- -- @string.escape: escape sequences
+-- @string.escape               
+--
+-- -- @string.special: other special strings (e.g. dates)
+-- @string.special              
+--
+-- -- @string.special.symbol: symbols or atoms
+-- @string.special.symbol       
+--
+-- -- @string.special.path: filenames
+-- @string.special.path         
+--
+-- -- @string.special.url: URIs (e.g. hyperlinks)
+-- @string.special.url          
+--
+-- -- @character: character literals
+-- @character                   
+--
+-- -- @character.special: special characters (e.g. wildcards)
+-- @character.special           
+--
+-- -- @boolean: boolean literals
+-- @boolean                     
+--
+-- -- @number: numeric literals
+-- @number                      
+--
+-- -- @number.float: floating-point number literals
+-- @number.float                
+--
+-- -- @type: type or class definitions and annotations
+-- @type                        
+--
+-- -- @type.builtin: built-in types
+-- @type.builtin                
+--
+-- -- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
+-- @type.definition             
+--
+-- -- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
+-- @attribute                   
+--
+-- -- @attribute.builtin: builtin annotations (e.g. @property in Python)
+-- @attribute.builtin           
+--
+-- -- @property: the key in key/value pairs
+-- @property                    
+--
+-- -- @function: function definitions
+-- @function                    
+--
+-- -- @function.builtin: built-in functions
+-- @function.builtin            
+--
+-- -- @function.call: function calls
+-- @function.call               
+--
+-- -- @function.macro: preprocessor macros
+-- @function.macro              
+--
+-- -- @function.method: method definitions
+-- @function.method             
+--
+-- -- @function.method.call: method calls
+-- @function.method.call        
+--
+-- -- @constructor: constructor calls and definitions
+-- @constructor                 
+--
+-- -- @operator: symbolic operators (e.g. +, *)
+-- @operator                    
+--
+-- -- @keyword: keywords not fitting into specific categories
+-- @keyword                     
+--
+-- -- @keyword.coroutine: keywords related to coroutines (e.g. go in Go, async/await in Python)
+-- @keyword.coroutine           
+--
+-- -- @keyword.function: keywords that define a function (e.g. func in Go, def in Python)
+-- @keyword.function            
+--
+-- -- @keyword.operator: operators that are English words (e.g. and, or)
+-- @keyword.operator            
+--
+-- -- @keyword.import: keywords for including or exporting modules (e.g. import, from in Python)
+-- @keyword.import              
+--
+-- -- @keyword.type: keywords describing namespaces and composite types (e.g. struct, enum)
+-- @keyword.type                
+--
+-- -- @keyword.modifier: keywords modifying other constructs (e.g. const, static, public)
+-- @keyword.modifier            
+--
+-- -- @keyword.repeat: keywords related to loops (e.g. for, while)
+-- @keyword.repeat              
+--
+-- -- @keyword.return: keywords like return and yield
+-- @keyword.return              
+--
+-- -- @keyword.debug: keywords related to debugging
+-- @keyword.debug               
+--
+-- -- @keyword.exception: keywords related to exceptions (e.g. throw, catch)
+-- @keyword.exception           
+--
+-- -- @keyword.conditional: keywords related to conditionals (e.g. if, else)
+-- @keyword.conditional         
+--
+-- -- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
+-- @keyword.conditional.ternary 
+--
+-- -- @keyword.directive: various preprocessor directives and shebangs
+-- @keyword.directive           
+--
+-- -- @keyword.directive.define: preprocessor definition directives
+-- @keyword.directive.define    
+--
+-- -- @punctuation.delimiter: delimiters (e.g. ;, ., ,)
+-- @punctuation.delimiter       
+--
+-- -- @punctuation.bracket: brackets (e.g. (), {}, [])
+-- @punctuation.bracket         
+--
+-- -- @punctuation.special: special symbols (e.g. {} in string interpolation)
+-- @punctuation.special         
+--
+-- -- @comment: line and block comments
+-- @comment                     
+--
+-- -- @comment.documentation: comments documenting code
+-- @comment.documentation       
+--
+-- -- @comment.error: error-type comments (e.g. ERROR, FIXME, DEPRECATED)
+-- @comment.error               
+--
+-- -- @comment.warning: warning-type comments (e.g. WARNING, FIX, HACK)
+-- @comment.warning             
+--
+-- -- @comment.todo: todo-type comments (e.g. TODO, WIP)
+-- @comment.todo                
+--
+-- -- @comment.note: note-type comments (e.g. NOTE, INFO, XXX)
+-- @comment.note                
+--
+-- -- @markup.strong: bold text
+-- @markup.strong               
+--
+-- -- @markup.italic: italic text
+-- @markup.italic               
+--
+-- -- @markup.strikethrough: struck-through text
+-- @markup.strikethrough        
+--
+-- -- @markup.underline: underlined text (only for literal underline markup!)
+-- @markup.underline            
+--
+-- -- @markup.heading: headings, titles (including markers)
+-- @markup.heading              
+--
+-- -- @markup.heading.1: top-level heading
+-- @markup.heading.1            
+--
+-- -- @markup.heading.2: section heading
+-- @markup.heading.2            
+--
+-- -- @markup.heading.3: subsection heading
+-- @markup.heading.3            
+--
+-- -- @markup.heading.4: and so on
+-- @markup.heading.4            
+--
+-- -- @markup.heading.5: and so forth
+-- @markup.heading.5            
+--
+-- -- @markup.heading.6: six levels ought to be enough for anybody
+-- @markup.heading.6            
+--
+-- -- @markup.quote: block quotes
+-- @markup.quote                
+--
+-- -- @markup.math: math environments (e.g. $ ... $ in LaTeX)
+-- @markup.math                 
+--
+-- -- @markup.link: text references, footnotes, citations, etc.
+-- @markup.link                 
+--
+-- -- @markup.link.label: link, reference descriptions
+-- @markup.link.label           
+--
+-- -- @markup.link.url: URL-style links
+-- @markup.link.url             
+--
+-- -- @markup.raw: literal or verbatim text (e.g. inline code)
+-- @markup.raw                  
+--
+-- -- @markup.raw.block: literal or verbatim text as a stand-alone block
+-- @markup.raw.block            
+--
+-- -- @markup.list: list markers
+-- @markup.list                 
+--
+-- -- @markup.list.checked: checked todo-style list markers
+-- @markup.list.checked         
+--
+-- -- @markup.list.unchecked: unchecked todo-style list markers
+-- @markup.list.unchecked       
+--
+-- -- @diff.plus: added text (for diff files)
+-- @diff.plus                   
+--
+-- -- @diff.minus: deleted text (for diff files)
+-- @diff.minus                  
+--
+-- -- @diff.delta: changed text (for diff files)
+-- @diff.delta                  
+--
+-- -- @tag: XML-style tag names (e.g. in XML, HTML, etc.)
+-- @tag
+--
+-- -- @tag.builtin: builtin tag names (e.g. HTML5 tags)
+-- @tag.builtin
+--
+-- -- @tag.attribute: XML-style tag attributes
+-- @tag.attribute
+--
+-- -- @tag.delimiter: XML-style tag delimiters
+-- @tag.delimiter
