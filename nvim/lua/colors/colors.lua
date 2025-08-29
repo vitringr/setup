@@ -1,10 +1,13 @@
 local M = {}
 
 --  TODO:
---    PreProc (preproc) needs its own color. #A3D4D5?
 --    parameter and field should be different
 
 M.ui = {
+  directory = "#7E9CD8",
+  title     = "#7E9CD8",
+
+  --
   fg         = "#DCD7BA",
   fg_dim     = "#C8C093",
   fg_reverse = "#223249",
@@ -23,8 +26,8 @@ M.ui = {
   nontext    = "#54546D",
   whitespace = "#54546D",
 
-  bg_search  = "#2D4F67",
-  bg_visual  = "#223249",
+  bg_search  = "#2D4F67", -- TODO: non-blue?
+  bg_visual  = "#223249", -- TODO: non-blue?
 
   pmenu = {
     fg       = "#DCD7BA",
@@ -38,34 +41,35 @@ M.ui = {
   float = {
     fg        = "#C8C093",
     bg        = "#16161D",
-    fg_border = "#54546D",
-    bg_border = "#16161D",
+    border    = "#54546D",
+    title     = "#938AA9",
   },
 }
 
 M.syntax = {
-  string     = "#98BB6C",
-  variable   = "none",
-  number     = "#D27E99",
-  constant   = "#FFA066",
-  identifier = "#E6C384",
-  parameter  = "#B8B4D0",
-  funct      = "#7E9CD8",
-  statement  = "#957FB8",
-  keyword    = "#957FB8",
-  storage    = "#957FB8",
-  operator   = "#C0A36E",
-  preproc    = "#E46876",
-  type       = "#7AA89F",
-  regex      = "#C0A36E",
-  deprec     = "#717C7C",
-  comment    = "#727169",
-  delimiter  = "#9CABCA",
-  exception  = "#E46876",
-  special1   = "#7FB4CA",
-  special2   = "#76946A",
-  special3   = "#E46876",
-  special4   = "#FF5D62",
+  variable    = "none",
+  constant    = "#FFA066",
+  identifier  = "#E6C384",
+  parameter   = "#B8B4D0",
+  number      = "#FFA066",
+  string      = "#98BB6C",
+  specialchar = "#76946A",
+  regexp      = "#C0A36E",
+  procedure   = "#7E9CD8",
+  type        = "#7AA89F",
+  statement   = "#957FB8",
+  keyword     = "#957FB8",
+  storage     = "#957FB8",
+  special     = "#7FB4CA",
+  operator    = "#C0A36E",
+  deprecated  = "#717C7C",
+  comment     = "#727169",
+  delimiter   = "#9CABCA",
+  exception   = "#E46876",
+  preproc     = "#D27E99",
+
+  special3    = "#E46876",
+  special4    = "#FF5D62",
 }
 
 M.vcs = {

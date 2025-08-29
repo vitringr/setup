@@ -1,3 +1,5 @@
+-- https://neovim.io/doc/user/lsp.html
+
 -- -- @lsp.type.class: Identifiers that declare or reference a class type
 -- @lsp.type.class
 --

@@ -28,7 +28,7 @@ u.cmd("hi! link Float Number");
 u.setHL(0, "Identifier", { fg = c.syntax.identifier })
 
 -- Function: function name (also: methods for classes)
-u.setHL(0, "Function", { fg = c.syntax.funct })
+u.setHL(0, "Function", { fg = c.syntax.procedure })
 
 -- Statement: any statement
 u.setHL(0, "Statement", { fg = c.syntax.statement, italic = true })
@@ -79,10 +79,10 @@ u.cmd("hi! link Structure StorageClass");
 u.cmd("hi! link Typedef Type");
 
 -- Special: any special symbol
-u.setHL(0, "Special", { fg = c.syntax.special1 })
+u.setHL(0, "Special", { fg = c.syntax.special })
 
 -- SpecialChar: special character in a constant
-u.setHL(0, "SpecialChar", { fg = c.syntax.special2 })
+u.setHL(0, "SpecialChar", { fg = c.syntax.specialchar })
 
 -- Tag: you can use CTRL-] on this
 u.cmd("hi! link Tag Special");

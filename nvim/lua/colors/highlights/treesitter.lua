@@ -1,261 +1,266 @@
--- -- @variable: various variable names
--- @variable
---
+-- https://neovim.io/doc/user/treesitter.html
+
+local c = require("colors/colors")
+local u = require("colors/utilities")
+
+-- @variable: various variable names
+u.setHL(0, "@variable", { fg = c.syntax.variable })
+
 -- -- @variable.builtin: built-in variable names (e.g. this, self)
 -- @variable.builtin
---
--- -- @variable.parameter: parameters of a function
--- @variable.parameter          
---
+
+-- @variable.parameter: parameters of a function
+u.setHL(0, "@variable.parameter", { fg = c.syntax.parameter })
+
 -- -- @variable.parameter.builtin: special parameters (e.g. _, it)
--- @variable.parameter.builtin  
+-- @variable.parameter.builtin
 --
 -- -- @variable.member: object and struct fields
 -- @variable.member             
---
--- -- @constant: constant identifiers
--- @constant                    
---
+
+-- @constant: constant identifiers
+u.cmd("hi! link @constant Constant");
+
 -- -- @constant.builtin: built-in constant values
--- @constant.builtin            
+-- @constant.builtin
 --
 -- -- @constant.macro: constants defined by the preprocessor
--- @constant.macro              
+-- @constant.macro
 --
 -- -- @module: modules or namespaces
--- @module                      
+-- @module
 --
 -- -- @module.builtin: built-in modules or namespaces
--- @module.builtin              
+-- @module.builtin
 --
 -- -- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
--- @label                       
---
--- -- @string: string literals
--- @string                      
---
+-- @label
+
+-- @string: string literals
+u.cmd("hi! link @string String");
+
 -- -- @string.documentation: string documenting code (e.g. Python docstrings)
--- @string.documentation        
---
--- -- @string.regexp: regular expressions
--- @string.regexp               
---
+-- @string.documentation
+
+-- @string.regexp: regular expressions
+u.setHL(0, "@string.regexp", { fg = c.syntax.regexp })
+
 -- -- @string.escape: escape sequences
--- @string.escape               
+-- @string.escape
 --
 -- -- @string.special: other special strings (e.g. dates)
--- @string.special              
+-- @string.special
 --
 -- -- @string.special.symbol: symbols or atoms
--- @string.special.symbol       
+-- @string.special.symbol
 --
 -- -- @string.special.path: filenames
--- @string.special.path         
+-- @string.special.path
 --
 -- -- @string.special.url: URIs (e.g. hyperlinks)
--- @string.special.url          
---
--- -- @character: character literals
--- @character                   
---
--- -- @character.special: special characters (e.g. wildcards)
--- @character.special           
---
--- -- @boolean: boolean literals
--- @boolean                     
---
--- -- @number: numeric literals
--- @number                      
---
--- -- @number.float: floating-point number literals
--- @number.float                
---
--- -- @type: type or class definitions and annotations
--- @type                        
---
+-- @string.special.url
+
+-- @character: character literals
+u.cmd("hi! link @character Character");
+
+-- @character.special: special characters (e.g. wildcards)
+u.cmd("hi! link @character.special SpecialChar");
+
+-- @boolean: boolean literals
+u.cmd("hi! link @boolean Boolean");
+
+-- @number: numeric literals
+u.cmd("hi! link @number Number");
+
+-- @number.float: floating-point number literals
+u.cmd("hi! link @number.float Float");
+
+-- @type: type or class definitions and annotations
+u.cmd("hi! link @type Type");
+
 -- -- @type.builtin: built-in types
--- @type.builtin                
+-- @type.builtin
 --
 -- -- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
--- @type.definition             
+-- @type.definition
 --
 -- -- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
--- @attribute                   
+-- @attribute
 --
 -- -- @attribute.builtin: builtin annotations (e.g. @property in Python)
--- @attribute.builtin           
+-- @attribute.builtin
 --
 -- -- @property: the key in key/value pairs
--- @property                    
---
--- -- @function: function definitions
--- @function                    
---
+-- @property
+
+-- @function: function definitions
+u.cmd("hi! link @function Function");
+
 -- -- @function.builtin: built-in functions
--- @function.builtin            
+-- @function.builtin
 --
 -- -- @function.call: function calls
--- @function.call               
+-- @function.call
 --
 -- -- @function.macro: preprocessor macros
--- @function.macro              
---
--- -- @function.method: method definitions
--- @function.method             
---
+-- @function.macro
+
+-- @function.method: method definitions
+u.cmd("hi! link @function.method Function");
+
 -- -- @function.method.call: method calls
--- @function.method.call        
+-- @function.method.call
 --
 -- -- @constructor: constructor calls and definitions
--- @constructor                 
---
--- -- @operator: symbolic operators (e.g. +, *)
--- @operator                    
---
--- -- @keyword: keywords not fitting into specific categories
--- @keyword                     
---
+-- @constructor
+
+-- @operator: symbolic operators (e.g. +, *)
+u.cmd("hi! link @operator Operator");
+
+-- @keyword: keywords not fitting into specific categories
+u.cmd("hi! link @keyword Keyword");
+
 -- -- @keyword.coroutine: keywords related to coroutines (e.g. go in Go, async/await in Python)
--- @keyword.coroutine           
+-- @keyword.coroutine
 --
 -- -- @keyword.function: keywords that define a function (e.g. func in Go, def in Python)
--- @keyword.function            
+-- @keyword.function
 --
 -- -- @keyword.operator: operators that are English words (e.g. and, or)
--- @keyword.operator            
+-- @keyword.operator
 --
 -- -- @keyword.import: keywords for including or exporting modules (e.g. import, from in Python)
--- @keyword.import              
+-- @keyword.import
 --
 -- -- @keyword.type: keywords describing namespaces and composite types (e.g. struct, enum)
--- @keyword.type                
+-- @keyword.type
 --
 -- -- @keyword.modifier: keywords modifying other constructs (e.g. const, static, public)
--- @keyword.modifier            
+-- @keyword.modifier
 --
 -- -- @keyword.repeat: keywords related to loops (e.g. for, while)
--- @keyword.repeat              
+-- @keyword.repeat
 --
 -- -- @keyword.return: keywords like return and yield
--- @keyword.return              
+-- @keyword.return
 --
 -- -- @keyword.debug: keywords related to debugging
--- @keyword.debug               
+-- @keyword.debug
 --
 -- -- @keyword.exception: keywords related to exceptions (e.g. throw, catch)
--- @keyword.exception           
+-- @keyword.exception
 --
 -- -- @keyword.conditional: keywords related to conditionals (e.g. if, else)
--- @keyword.conditional         
+-- @keyword.conditional
 --
 -- -- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
--- @keyword.conditional.ternary 
+-- @keyword.conditional.ternary
 --
 -- -- @keyword.directive: various preprocessor directives and shebangs
--- @keyword.directive           
+-- @keyword.directive
 --
 -- -- @keyword.directive.define: preprocessor definition directives
--- @keyword.directive.define    
---
--- -- @punctuation.delimiter: delimiters (e.g. ;, ., ,)
--- @punctuation.delimiter       
---
+-- @keyword.directive.define
+
+-- @punctuation.delimiter: delimiters (e.g. ;, ., ,)
+u.cmd("hi! link @punctuation.delimiter Delimiter");
+
 -- -- @punctuation.bracket: brackets (e.g. (), {}, [])
--- @punctuation.bracket         
+-- @punctuation.bracket
 --
 -- -- @punctuation.special: special symbols (e.g. {} in string interpolation)
--- @punctuation.special         
---
--- -- @comment: line and block comments
--- @comment                     
---
+-- @punctuation.special
+
+-- @comment: line and block comments
+u.cmd("hi! link @comment Comment");
+
 -- -- @comment.documentation: comments documenting code
--- @comment.documentation       
+-- @comment.documentation
 --
 -- -- @comment.error: error-type comments (e.g. ERROR, FIXME, DEPRECATED)
--- @comment.error               
+-- @comment.error
 --
 -- -- @comment.warning: warning-type comments (e.g. WARNING, FIX, HACK)
--- @comment.warning             
+-- @comment.warning
 --
 -- -- @comment.todo: todo-type comments (e.g. TODO, WIP)
--- @comment.todo                
+-- @comment.todo
 --
 -- -- @comment.note: note-type comments (e.g. NOTE, INFO, XXX)
--- @comment.note                
+-- @comment.note
 --
 -- -- @markup.strong: bold text
--- @markup.strong               
+-- @markup.strong
 --
 -- -- @markup.italic: italic text
--- @markup.italic               
+-- @markup.italic
 --
 -- -- @markup.strikethrough: struck-through text
--- @markup.strikethrough        
+-- @markup.strikethrough
 --
 -- -- @markup.underline: underlined text (only for literal underline markup!)
--- @markup.underline            
+-- @markup.underline
 --
 -- -- @markup.heading: headings, titles (including markers)
--- @markup.heading              
+-- @markup.heading
 --
 -- -- @markup.heading.1: top-level heading
--- @markup.heading.1            
+-- @markup.heading.1
 --
 -- -- @markup.heading.2: section heading
--- @markup.heading.2            
+-- @markup.heading.2
 --
 -- -- @markup.heading.3: subsection heading
--- @markup.heading.3            
+-- @markup.heading.3
 --
 -- -- @markup.heading.4: and so on
--- @markup.heading.4            
+-- @markup.heading.4
 --
 -- -- @markup.heading.5: and so forth
--- @markup.heading.5            
+-- @markup.heading.5
 --
 -- -- @markup.heading.6: six levels ought to be enough for anybody
--- @markup.heading.6            
+-- @markup.heading.6
 --
 -- -- @markup.quote: block quotes
--- @markup.quote                
+-- @markup.quote
 --
 -- -- @markup.math: math environments (e.g. $ ... $ in LaTeX)
--- @markup.math                 
+-- @markup.math
 --
 -- -- @markup.link: text references, footnotes, citations, etc.
--- @markup.link                 
+-- @markup.link
 --
 -- -- @markup.link.label: link, reference descriptions
--- @markup.link.label           
+-- @markup.link.label
 --
 -- -- @markup.link.url: URL-style links
--- @markup.link.url             
+-- @markup.link.url
 --
 -- -- @markup.raw: literal or verbatim text (e.g. inline code)
--- @markup.raw                  
+-- @markup.raw
 --
 -- -- @markup.raw.block: literal or verbatim text as a stand-alone block
--- @markup.raw.block            
+-- @markup.raw.block
 --
 -- -- @markup.list: list markers
--- @markup.list                 
+-- @markup.list
 --
 -- -- @markup.list.checked: checked todo-style list markers
--- @markup.list.checked         
+-- @markup.list.checked
 --
 -- -- @markup.list.unchecked: unchecked todo-style list markers
--- @markup.list.unchecked       
---
--- -- @diff.plus: added text (for diff files)
--- @diff.plus                   
---
--- -- @diff.minus: deleted text (for diff files)
--- @diff.minus                  
---
--- -- @diff.delta: changed text (for diff files)
--- @diff.delta                  
---
+-- @markup.list.unchecked
+
+-- @diff.plus: added text (for diff files)
+u.setHL(0, "@diff.plus", { fg = c.vcs.added })
+
+-- @diff.minus: deleted text (for diff files)
+u.setHL(0, "@diff.minus", { fg = c.vcs.removed })
+
+-- @diff.delta: changed text (for diff files)
+u.setHL(0, "@diff.delta", { fg = c.vcs.changed })
+
 -- -- @tag: XML-style tag names (e.g. in XML, HTML, etc.)
 -- @tag
 --

@@ -1,3 +1,5 @@
+-- https://neovim.io/doc/user/diagnostic.html
+
 -- -- DiagnosticError: Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 -- DiagnosticError
 --
