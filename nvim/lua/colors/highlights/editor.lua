@@ -114,8 +114,8 @@ u.setHL(0, "Folded", { fg = c.ui.special, bg = "NONE" })
 -- MoreMsg: more-prompt  
 u.setHL(0, "MoreMsg", { fg = c.ui.more_msg })
 
--- -- NonText: '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also hl-EndOfBuffer.
--- NonText
+-- NonText: '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also hl-EndOfBuffer.
+u.setHL(0, "NonText", { fg = c.ui.nontext })
 
 -- Normal: Normal text.
 u.setHL(0, "Normal", { fg = c.ui.fg_dim })

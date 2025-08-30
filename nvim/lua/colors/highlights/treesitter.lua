@@ -31,7 +31,8 @@ u.cmd("hi! link @constant.macro @constant")
 u.setHL(0, "@module", { fg = c.syntax.module })
 
 -- @module.builtin: built-in modules or namespaces
-u.setHL(0, "@module.builtin", { fg = c.syntax.builtin })
+-- u.setHL(0, "@module.builtin", { fg = c.syntax.builtin })
+u.cmd("hi! link @module.builtin @module")
 
 -- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
 u.setHL(0, "@label", { fg = c.syntax.exception })
@@ -39,14 +40,13 @@ u.setHL(0, "@label", { fg = c.syntax.exception })
 -- @string: string literals
 u.setHL(0, "@string", { fg = c.syntax.string })
 
--- -- @string.documentation: string documenting code (e.g. Python docstrings)
--- @string.documentation
+-- @string.documentation: string documenting code (e.g. Python docstrings)
+u.cmd("hi! link @string.documentation @comment.documentation")
 
 -- @string.regexp: regular expressions
 u.setHL(0, "@string.regexp", { fg = c.syntax.regexp })
 
 -- @string.escape: escape sequences
-u.setHL(0, "@string.escape", { fg = c.syntax.specialchar })
 u.cmd("hi! link @string.escape @character.special")
 
 -- @string.special: other special strings (e.g. dates)
@@ -60,7 +60,6 @@ u.cmd("hi! link @string.special.path @character.special")
 
 -- @string.special.url: URIs (e.g. hyperlinks)
 u.setHL(0, "@string.special.url", { fg = c.syntax.specialchar, italic = true, underline = true })
--- u.cmd("hi! link @string.special.url @character.special")
 
 -- @character: character literals
 u.setHL(0, "@character", { fg = c.syntax.string })
@@ -86,8 +85,8 @@ u.cmd("hi! link @type.builtin @type")
 -- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
 u.cmd("hi! link @type.definition @type")
 
--- -- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
--- @attribute
+-- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
+u.setHL(0, "@attribute", { fg = c.syntax.special })
 
 -- @attribute.builtin: builtin annotations (e.g. @property in Python)
 u.setHL(0, "@attribute.builtin", { fg = c.syntax.builtin })
@@ -101,11 +100,11 @@ u.setHL(0, "@function", { fg = c.syntax.procedure })
 -- @function.builtin: built-in functions
 u.setHL(0, "@function.builtin", { fg = c.syntax.builtin })
 
--- -- @function.call: function calls
--- @function.call
+-- @function.call: function calls
+u.cmd("hi! link @function.call @function")
 
--- -- @function.macro: preprocessor macros
--- @function.macro
+-- @function.macro: preprocessor macros
+u.cmd("hi! link @function.macro @function")
 
 -- @function.method: method definitions
 u.cmd("hi! link @function.method @function");
@@ -146,8 +145,8 @@ u.cmd("hi! link @keyword.repeat @keyword")
 -- @keyword.return: keywords like return and yield
 u.cmd("hi! link @keyword.return @keyword")
 
--- -- @keyword.debug: keywords related to debugging
--- @keyword.debug
+-- @keyword.debug: keywords related to debugging
+u.setHL(0, "@keyword.debug", { fg = c.syntax.special })
 
 -- @keyword.exception: keywords related to exceptions (e.g. throw, catch)
 u.setHL(0, "@keyword.exception", { fg = c.syntax.exception })
@@ -158,8 +157,8 @@ u.cmd("hi! link @keyword.conditional @keyword")
 -- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
 u.cmd("hi! link @keyword.conditional.ternary @operator")
 
--- -- @keyword.directive: various preprocessor directives and shebangs
--- @keyword.directive
+-- @keyword.directive: various preprocessor directives and shebangs
+u.setHL(0, "@keyword.directive", { fg = c.syntax.preproc })
 
 -- @keyword.directive.define: preprocessor definition directives
 u.setHL(0, "@keyword.directive.define", { fg = c.syntax.preproc })
@@ -176,8 +175,8 @@ u.setHL(0, "@punctuation.special", { fg = c.syntax.special })
 -- @comment: line and block comments
 u.setHL(0, "@comment", { fg = c.syntax.comment })
 
--- -- @comment.documentation: comments documenting code
--- @comment.documentation
+-- @comment.documentation: comments documenting code
+u.cmd("hi! link @comment.documentation @comment")
 
 -- -- @comment.error: error-type comments (e.g. ERROR, FIXME, DEPRECATED)
 u.setHL(0, "@comment.error", { fg = c.ui.white, bg = c.diag.error })
