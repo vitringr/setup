@@ -4,6 +4,9 @@ local M = {}
 --    parameter and field should be different
 
 M.ui = {
+  white         = "#EEEEEE",
+  black         = "#111111",
+
   directory     = "#7E9CD8",
   title         = "#7E9CD8",
   win_separator = "#54546D",
@@ -57,22 +60,23 @@ M.syntax = {
   identifier  = "#E6C384",
   property    = "#E6C384",
   parameter   = "#B8B4D0",
+  procedure   = "#7E9CD8",
   string      = "#98BB6C",
   specialchar = "#76946A",
-  regexp      = "#C0A36E",
-  procedure   = "#7E9CD8",
   type        = "#7AA89F",
+  tag         = "#7AA89F",
+  operator    = "#C0A36E",
+  regexp      = "#C0A36E",
+  delimiter   = "#9CABCA",
+  special     = "#7FB4CA",
+  builtin     = "#7FB4CA",
   statement   = "#957FB8",
   keyword     = "#957FB8",
   storage     = "#957FB8",
-  special     = "#7FB4CA",
-  operator    = "#C0A36E",
   deprecated  = "#717C7C",
   comment     = "#727169",
-  delimiter   = "#9CABCA",
   exception   = "#E46876",
   preproc     = "#D27E99",
-  builtin     = "#7FB4CA", -- #C34043 ?
 
   module      = "#938056",
 

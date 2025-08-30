@@ -37,6 +37,7 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "jsdoc",
 
         "json",
         "csv",
@@ -45,6 +46,8 @@ return {
 
         "glsl",
         "hlsl",
+
+        "comment",
       },
 
       ignore_install = { },

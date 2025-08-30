@@ -24,8 +24,8 @@ u.setHL(0, "@constant", { fg = c.syntax.constant })
 -- @constant.builtin: built-in constant values
 u.setHL(0, "@constant.builtin", { fg = c.syntax.builtin })
 
--- -- @constant.macro: constants defined by the preprocessor
--- @constant.macro
+-- @constant.macro: constants defined by the preprocessor
+u.cmd("hi! link @constant.macro @constant")
 
 -- @module: modules or namespaces
 u.setHL(0, "@module", { fg = c.syntax.module })
@@ -33,8 +33,8 @@ u.setHL(0, "@module", { fg = c.syntax.module })
 -- @module.builtin: built-in modules or namespaces
 u.setHL(0, "@module.builtin", { fg = c.syntax.builtin })
 
--- -- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
--- @label
+-- @label: GOTO and other labels (e.g. label: in C), including heredoc labels
+u.setHL(0, "@label", { fg = c.syntax.exception })
 
 -- @string: string literals
 u.setHL(0, "@string", { fg = c.syntax.string })
@@ -45,20 +45,22 @@ u.setHL(0, "@string", { fg = c.syntax.string })
 -- @string.regexp: regular expressions
 u.setHL(0, "@string.regexp", { fg = c.syntax.regexp })
 
--- -- @string.escape: escape sequences
--- @string.escape
---
--- -- @string.special: other special strings (e.g. dates)
--- @string.special
---
--- -- @string.special.symbol: symbols or atoms
--- @string.special.symbol
---
--- -- @string.special.path: filenames
--- @string.special.path
---
--- -- @string.special.url: URIs (e.g. hyperlinks)
--- @string.special.url
+-- @string.escape: escape sequences
+u.setHL(0, "@string.escape", { fg = c.syntax.specialchar })
+u.cmd("hi! link @string.escape @character.special")
+
+-- @string.special: other special strings (e.g. dates)
+u.cmd("hi! link @string.special @character.special")
+
+-- @string.special.symbol: symbols or atoms
+u.cmd("hi! link @string.special.symbol @character.special")
+
+-- @string.special.path: filenames
+u.cmd("hi! link @string.special.path @character.special")
+
+-- @string.special.url: URIs (e.g. hyperlinks)
+u.setHL(0, "@string.special.url", { fg = c.syntax.specialchar, italic = true, underline = true })
+-- u.cmd("hi! link @string.special.url @character.special")
 
 -- @character: character literals
 u.setHL(0, "@character", { fg = c.syntax.string })
@@ -79,11 +81,11 @@ u.cmd("hi! link @boolean @number")
 u.setHL(0, "@type", { fg = c.syntax.type })
 
 -- @type.builtin: built-in types
-u.setHL(0, "@type.builtin", { fg = c.syntax.builtin })
+u.cmd("hi! link @type.builtin @type")
 
--- -- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
--- @type.definition
---
+-- @type.definition: identifiers in type definitions (e.g. typedef <type> <identifier> in C)
+u.cmd("hi! link @type.definition @type")
+
 -- -- @attribute: attribute annotations (e.g. Python decorators, Rust lifetimes)
 -- @attribute
 
@@ -101,7 +103,7 @@ u.setHL(0, "@function.builtin", { fg = c.syntax.builtin })
 
 -- -- @function.call: function calls
 -- @function.call
---
+
 -- -- @function.macro: preprocessor macros
 -- @function.macro
 
@@ -111,23 +113,23 @@ u.cmd("hi! link @function.method @function");
 -- @function.method.call: method calls
 u.cmd("hi! link @function.method.call @function.method")
 
--- -- @constructor: constructor calls and definitions
--- @constructor
+-- @constructor: constructor calls and definitions
+u.setHL(0, "@constructor", { fg = c.syntax.special })
 
 -- @operator: symbolic operators (e.g. +, *)
-u.cmd("hi! link @operator Operator");
+u.setHL(0, "@operator", { fg = c.syntax.operator })
 
 -- @keyword: keywords not fitting into specific categories
 u.setHL(0, "@keyword", { fg = c.syntax.keyword, italic = true })
 
--- -- @keyword.coroutine: keywords related to coroutines (e.g. go in Go, async/await in Python)
--- @keyword.coroutine
+-- @keyword.coroutine: keywords related to coroutines (e.g. go in Go, async/await in Python)
+u.cmd("hi! link @keyword.coroutine @keyword")
 
 -- @keyword.function: keywords that define a function (e.g. func in Go, def in Python)
 u.cmd("hi! link @keyword.function @keyword")
 
--- -- @keyword.operator: operators that are English words (e.g. and, or)
--- @keyword.operator
+-- @keyword.operator: operators that are English words (e.g. and, or)
+u.cmd("hi! link @keyword.operator @operator")
 
 -- @keyword.import: keywords for including or exporting modules (e.g. import, from in Python)
 u.setHL(0, "@keyword.import", { fg = c.syntax.preproc })
@@ -153,42 +155,42 @@ u.setHL(0, "@keyword.exception", { fg = c.syntax.exception })
 -- @keyword.conditional: keywords related to conditionals (e.g. if, else)
 u.cmd("hi! link @keyword.conditional @keyword")
 
--- -- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
--- @keyword.conditional.ternary
---
+-- @keyword.conditional.ternary: ternary operator (e.g. ?, :)
+u.cmd("hi! link @keyword.conditional.ternary @operator")
+
 -- -- @keyword.directive: various preprocessor directives and shebangs
 -- @keyword.directive
---
--- -- @keyword.directive.define: preprocessor definition directives
--- @keyword.directive.define
+
+-- @keyword.directive.define: preprocessor definition directives
+u.setHL(0, "@keyword.directive.define", { fg = c.syntax.preproc })
 
 -- @punctuation.delimiter: delimiters (e.g. ;, ., ,)
-u.cmd("hi! link @punctuation.delimiter Delimiter");
+u.setHL(0, "@punctuation.delimiter", { fg = c.syntax.delimiter })
 
 -- @punctuation.bracket: brackets (e.g. (), {}, [])
-u.cmd("hi! link @punctuation.bracket Delimiter");
+u.setHL(0, "@punctuation.bracket", { fg = c.syntax.delimiter })
 
--- -- @punctuation.special: special symbols (e.g. {} in string interpolation)
--- @punctuation.special
+-- @punctuation.special: special symbols (e.g. {} in string interpolation)
+u.setHL(0, "@punctuation.special", { fg = c.syntax.special })
 
 -- @comment: line and block comments
-u.cmd("hi! link @comment Comment");
+u.setHL(0, "@comment", { fg = c.syntax.comment })
 
 -- -- @comment.documentation: comments documenting code
 -- @comment.documentation
---
+
 -- -- @comment.error: error-type comments (e.g. ERROR, FIXME, DEPRECATED)
--- @comment.error
---
+u.setHL(0, "@comment.error", { fg = c.ui.white, bg = c.diag.error })
+
 -- -- @comment.warning: warning-type comments (e.g. WARNING, FIX, HACK)
--- @comment.warning
---
--- -- @comment.todo: todo-type comments (e.g. TODO, WIP)
--- @comment.todo
---
--- -- @comment.note: note-type comments (e.g. NOTE, INFO, XXX)
--- @comment.note
---
+u.setHL(0, "@comment.warning", { fg = c.ui.black, bg = c.diag.warning })
+
+-- @comment.todo: todo-type comments (e.g. TODO, WIP)
+u.setHL(0, "@comment.todo", { fg = c.ui.white, bg = c.diag.info })
+
+-- @comment.note: note-type comments (e.g. NOTE, INFO, XXX)
+u.setHL(0, "@comment.note", { fg = c.ui.black, bg = c.diag.hint })
+
 -- -- @markup.strong: bold text
 -- @markup.strong
 --
@@ -261,14 +263,14 @@ u.setHL(0, "@diff.minus", { fg = c.vcs.removed })
 -- @diff.delta: changed text (for diff files)
 u.setHL(0, "@diff.delta", { fg = c.vcs.changed })
 
--- -- @tag: XML-style tag names (e.g. in XML, HTML, etc.)
--- @tag
+-- @tag: XML-style tag names (e.g. in XML, HTML, etc.)
+u.setHL(0, "@tag", { fg = c.syntax.tag })
 
 -- @tag.builtin: builtin tag names (e.g. HTML5 tags)
 u.setHL(0, "@tag.builtin", { fg = c.syntax.builtin })
 
--- -- @tag.attribute: XML-style tag attributes
--- @tag.attribute
---
--- -- @tag.delimiter: XML-style tag delimiters
--- @tag.delimiter
+-- @tag.attribute: XML-style tag attributes
+u.setHL(0, "@tag.attribute", { fg = c.syntax.property })
+
+-- @tag.delimiter: XML-style tag delimiters
+u.setHL(0, "@tag.delimiter", { fg = c.syntax.delimiter })
